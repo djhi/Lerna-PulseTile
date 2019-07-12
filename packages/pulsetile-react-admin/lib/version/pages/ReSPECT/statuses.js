@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.STATUS_INCOMPLETE = 'Incomplete';
+exports.STATUS_EDITING = 'Editing';
+exports.STATUS_IN_PROGRESS = 'In progress';
+exports.STATUS_COMPLETED = 'Completed';
+exports.STATUS_NONE = '-';
+exports.TOTAL_ROWS_NUMBER = 10;
+exports.DATE_FORMAT = "DD-MM-YYYY";
+exports.DATE_PICKER_FORMAT = "dd-MM-yyyy";
+exports.TIME_FORMAT = "HH:mm";
+exports.DATE_TIME_FORMAT = "DD-MM-YYYY HH:mm";
+exports.DATE_TIME_PICKER_FORMAT = "dd-MM-yyyy HH:mm";

@@ -1,0 +1,9 @@
+0 silly argv { _: [ 'bootstrap' ],
+0 silly argv   lernaVersion: '3.15.0',
+0 silly argv   '$0': '/home/bogdan/Work/PulseTile/Lerna/node_modules/.bin/lerna' }
+1 notice cli v3.15.0
+2 verbose rootPath /home/bogdan/Work/PulseTile/Lerna
+3 error JSONError: Unexpected token } in JSON at position 1763 while parsing near '...    "lib": "lib",  },  "files": [    ...' in packages/pulsetile-react-admin/package.json
+3 error     at module.exports (/home/bogdan/Work/PulseTile/Lerna/node_modules/parse-json/index.js:26:19)
+3 error     at parse (/home/bogdan/Work/PulseTile/Lerna/node_modules/load-json-file/index.js:8:29)
+3 error     at pify.then.data (/home/bogdan/Work/PulseTile/Lerna/node_modules/load-json-file/index.js:10:67)

@@ -1,0 +1,198 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var react_1 = __importDefault(require("react"));
+var token_1 = require("../token");
+var core_1 = require("@material-ui/core");
+var Typography_1 = __importDefault(require("@material-ui/core/Typography"));
+var styles = {
+    mainSpinner: {
+        display: "block",
+        position: "fixed",
+        top: 0,
+        bottom: 0,
+        left: 0,
+        right: 0,
+        paddingTop: 150,
+        zIndex: 9999,
+        backgroundColor: "#fff",
+        transition: "opacity 1s ease, visibility 1s ease, background 1s ease",
+    },
+    slidesAndRings: {
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        left: "50%",
+        position: "absolute",
+        transform: "translate(-50%, -50%)",
+        marginLeft: "-100px",
+    },
+    tips: {
+        overflow: "hidden",
+        width: 280,
+        margin: "0 auto",
+        position: "absolute",
+        textAlign: "center",
+        top: 180,
+        left: -40,
+        fontFamily: "HK_Grotesk_Regular",
+        "& > p": {
+            marginTop: 10,
+            marginBottom: 10,
+            fontSize: 24,
+        },
+    },
+    '@keyframes slide': {
+        "0%": { marginLeft: 0 },
+        "9.91%": { marginLeft: 0 },
+        "10.01%": { marginLeft: -280 },
+        "19.92%": { marginLeft: -280 },
+        "20.02%": { marginLeft: -560 },
+        "29.93%": { marginLeft: -560 },
+        "30.03%": { marginLeft: -840 },
+        "39.94%": { marginLeft: -840 },
+        "40.04%": { marginLeft: -1120 },
+        "49.95%": { marginLeft: -1120 },
+        "50.05%": { marginLeft: -1400 },
+        "59.96%": { marginLeft: -1400 },
+        "60.06%": { marginLeft: -1680 },
+        "69.97%": { marginLeft: -1680 },
+        "70.07%": { marginLeft: -1960 },
+        "79.98%": { marginLeft: -1960 },
+        "80.08%": { marginLeft: -2240 },
+        "89.99%": { marginLeft: -2240 },
+        "90.09%": { marginLeft: -2520 },
+        "100%": { marginLeft: -2520 },
+    },
+    slideWrapper: {
+        width: 2800,
+        WebkitAnimation: "slide 100.9s ease-out infinite",
+        animation: "slide 100.9s ease-out infinite",
+    },
+    slide: {
+        float: "left",
+        width: 280,
+    },
+    slideNumber: {
+        color: "#000",
+        textAlign: "center",
+        fontSize: 14,
+        "& h3": {
+            fontFamily: '"HK Grotesk SemiBold", Arial, sans-serif',
+            marginTop: 10,
+            marginBottom: 10,
+            fontSize: 18,
+        },
+    },
+    '@keyframes rings': {
+        "0%": {
+            WebkitTransform: "rotate(0)",
+            transform: "rotate(0)",
+        },
+        "100%": {
+            WebkitTransform: "rotate(360deg)",
+            transform: "rotate(360deg)",
+        }
+    },
+    '@keyframes rings_reverse': {
+        "0%": {
+            WebkitTransform: "rotate(0)",
+            transform: "rotate(0)",
+        },
+        "100%": {
+            WebkitTransform: "rotate(-360deg)",
+            transform: "rotate(-360deg)",
+        }
+    },
+    rings: {
+        position: "relative",
+        "& div": {
+            position: "absolute",
+            width: 120,
+            height: 120,
+            top: 40,
+            left: 40,
+            borderRadius: "50%",
+            border: "10px solid #000",
+            borderColor: "#ff5d00 transparent #ff5d00 transparent",
+            WebkitAnimation: "rings 1s linear infinite",
+            animation: "rings 1s linear infinite",
+        },
+        "& div:nth-child(2)": {
+            width: 96,
+            height: 96,
+            top: 52,
+            left: 52,
+            borderColor: "transparent #cacaca transparent #cacaca",
+            WebkitAnimation: "rings_reverse 1s linear infinite",
+            animation: "rings_reverse 1s linear infinite",
+        }
+    },
+};
+var LoadingSlider = function (_a) {
+    var classes = _a.classes;
+    return (react_1.default.createElement("div", { className: classes.mainSpinner },
+        react_1.default.createElement("div", { className: classes.slidesAndRings },
+            token_1.token &&
+                react_1.default.createElement("div", { className: classes.tips },
+                    react_1.default.createElement(Typography_1.default, null, "Top Tips to a Healthy Life"),
+                    react_1.default.createElement("div", { className: classes.slideWrapper },
+                        react_1.default.createElement("div", { className: classes.slide },
+                            react_1.default.createElement("div", { className: classes.slideNumber },
+                                react_1.default.createElement("h3", null, "Give up smoking"),
+                                react_1.default.createElement(Typography_1.default, null, "If you're a smoker, quit. It's the single best thing you can do for your heart health."),
+                                react_1.default.createElement(Typography_1.default, null, "Smoking is one of the main causes of coronary heart disease. A year after giving up, your risk of a heart attack falls to about half that of a smoker."),
+                                react_1.default.createElement(Typography_1.default, null, "You're more likely to stop smoking for good if you use NHS stop smoking services. Visit the Smokefree website or ask your GP for help with quitting."))),
+                        react_1.default.createElement("div", { className: classes.slide },
+                            react_1.default.createElement("div", { className: classes.slideNumber },
+                                react_1.default.createElement("h3", null, "Get active"),
+                                react_1.default.createElement(Typography_1.default, null, "Getting \u2013 and staying \u2013 active can reduce your risk of developing heart disease. It can also be a great mood booster and stress buster."),
+                                react_1.default.createElement(Typography_1.default, null, "Do 150 minutes of moderate-intensity aerobic activity every week. One way to achieve this target is by doing 30 minutes of activity on 5 days a week. Fit it in where you can, such as by cycling to work."))),
+                        react_1.default.createElement("div", { className: classes.slide },
+                            react_1.default.createElement("div", { className: classes.slideNumber },
+                                react_1.default.createElement("h3", null, "Manage your weight"),
+                                react_1.default.createElement(Typography_1.default, null, "Being overweight can increase your risk of heart disease. Stick to a healthy, balanced diet low in fat and sugar, with plenty of fruit and vegetables, combined with regular physical activity."),
+                                react_1.default.createElement(Typography_1.default, null, "Find out if you're a healthy weight with the BMI calculator. If you're overweight, try our 12-week NHS weight loss plan."))),
+                        react_1.default.createElement("div", { className: classes.slide },
+                            react_1.default.createElement("div", { className: classes.slideNumber },
+                                react_1.default.createElement("h3", null, "Eat more fibre"),
+                                react_1.default.createElement(Typography_1.default, null, "Eat plenty of fibre to help lower your risk of heart disease \u2013 aim for at least 30g a day."),
+                                react_1.default.createElement(Typography_1.default, null, "Eat fibre from a variety of sources, such as wholemeal bread, bran, oats and wholegrain cereals, potatoes with their skins on, and plenty of fruit and veg."))),
+                        react_1.default.createElement("div", { className: classes.slide },
+                            react_1.default.createElement("div", { className: classes.slideNumber },
+                                react_1.default.createElement("h3", null, "Cut down on saturated fat"),
+                                react_1.default.createElement(Typography_1.default, null, "Eating too many foods that are high in saturated fat can raise the level of cholesterol in your blood. This increases your risk of heart disease."),
+                                react_1.default.createElement(Typography_1.default, null, "Choose leaner cuts of meat and lower fat dairy products like 1% fat milk over full-fat (or whole) milk."))),
+                        react_1.default.createElement("div", { className: classes.slide },
+                            react_1.default.createElement("div", { className: classes.slideNumber },
+                                react_1.default.createElement("h3", null, "Get your 5 A Day"),
+                                react_1.default.createElement(Typography_1.default, null, "Eat at least 5 portions of a variety of fruit and vegetables a day. They're a good source of fibre, vitamins and minerals."),
+                                react_1.default.createElement(Typography_1.default, null, "There are lots of tasty ways to get your 5 A Day, like adding chopped fruit to cereal or including vegetables in your pasta sauces and curries."))),
+                        react_1.default.createElement("div", { className: classes.slide },
+                            react_1.default.createElement("div", { className: classes.slideNumber },
+                                react_1.default.createElement("h3", null, "Cut down on salt"),
+                                react_1.default.createElement(Typography_1.default, null, "To maintain healthy blood pressure, avoid using salt at the table and try adding less to your cooking. Once you get used to the taste of food without added salt, you can cut it out completely."),
+                                react_1.default.createElement(Typography_1.default, null, "Watch out for high salt levels in ready-made foods. Most of the salt we eat is already in the foods we buy. Check the food labels \u2013 a food is high in salt if it has more than 1.5g salt (or 0.6g sodium) per 100g."),
+                                react_1.default.createElement(Typography_1.default, null, "Adults should eat less than 6g of salt a day in total \u2013 that's about 1 teaspoon."))),
+                        react_1.default.createElement("div", { className: classes.slide },
+                            react_1.default.createElement("div", { className: classes.slideNumber },
+                                react_1.default.createElement("h3", null, "Eat Fish"),
+                                react_1.default.createElement(Typography_1.default, null, "Eat fish at least twice a week, including a portion of oily fish. Fish such as pilchards, sardines and salmon are a source of omega-3 fats, which may help protect against heart disease."),
+                                react_1.default.createElement(Typography_1.default, null, "Pregnant or breastfeeding women should not have more than 2 portions of oily fish a week."))),
+                        react_1.default.createElement("div", { className: classes.slide },
+                            react_1.default.createElement("div", { className: classes.slideNumber },
+                                react_1.default.createElement("h3", null, "Drink less alcohol"),
+                                react_1.default.createElement(Typography_1.default, null, "Do not forget that alcohol contains calories. Regularly drinking more than the NHS recommends can have a noticeable impact on your waistline."),
+                                react_1.default.createElement(Typography_1.default, null, "Try to keep to the recommended daily alcohol limits to reduce the risk of serious problems with your health, including risks to your heart health."))),
+                        react_1.default.createElement("div", { className: classes.slide },
+                            react_1.default.createElement("div", { className: classes.slideNumber },
+                                react_1.default.createElement("h3", null, "Read the food label"),
+                                react_1.default.createElement(Typography_1.default, null, "When shopping, it's a good idea to look at the label on food and drink packaging to see how many calories and how much fat, salt and sugar the product contains."),
+                                react_1.default.createElement(Typography_1.default, null, "Understanding what's in food and how it fits in with the rest of your diet will help you make healthier choices."))))),
+            react_1.default.createElement("div", { className: classes.rings },
+                react_1.default.createElement("div", null),
+                react_1.default.createElement("div", null)))));
+};
+exports.default = (core_1.withStyles(styles)(LoadingSlider));
