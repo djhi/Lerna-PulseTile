@@ -10,6 +10,6 @@
   },
   "workspaces": [
     "packages/*",
-    "versions/*"
+    "projects/*"
   ]
 }
