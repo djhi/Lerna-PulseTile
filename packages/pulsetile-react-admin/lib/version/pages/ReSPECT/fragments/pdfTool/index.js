@@ -7,6 +7,7 @@ var moment_1 = __importDefault(require("moment"));
 var get_1 = __importDefault(require("lodash/get"));
 var pdfkit_1 = __importDefault(require("@react-pdf/pdfkit"));
 var blob_stream_1 = __importDefault(require("blob-stream"));
+require("brace");
 require("brace/mode/javascript");
 require("brace/theme/monokai");
 var page1_1 = __importDefault(require("./page1"));

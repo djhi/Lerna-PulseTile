@@ -2,7 +2,7 @@ import moment from "moment";
 import get from "lodash/get";
 import PDFDocument from "@react-pdf/pdfkit";
 import blobStream from "blob-stream";
-import ace from 'brace';
+import 'brace';
 import 'brace/mode/javascript';
 import 'brace/theme/monokai';
 

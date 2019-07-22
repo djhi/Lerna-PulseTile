@@ -5,5 +5,5 @@
     "rootDir": "src"
   },
   "exclude": ["**/*.spec.ts", "**/*.spec.tsx", "**/*.spec.js"],
-  "include": ["src"]
+  "include": ["src", "typings/images.d.ts"]
 }
